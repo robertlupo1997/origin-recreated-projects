@@ -1,3 +1,5 @@
+[![CI](https://github.com//actions/workflows/ci.yml/badge.svg)](https://github.com//actions/workflows/ci.yml)
+
 # Origin Recreated Projects
 
 [![Pages](https://github.com/robertlupo1997/origin-recreated-projects/actions/workflows/pages.yml/badge.svg)](https://github.com/robertlupo1997/origin-recreated-projects/actions/workflows/pages.yml)
