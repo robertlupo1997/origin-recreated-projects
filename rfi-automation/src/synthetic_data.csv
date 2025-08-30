@@ -1,0 +1,9 @@
+rfi_id,project_name,requestor,category,priority,status,date_submitted,description,estimated_cost
+RFI-001,Downtown Office Complex,John Smith,Structural,High,Open,2024-01-15,"Clarification needed on steel beam specifications for floor 12",25000
+RFI-002,Residential Tower A,Sarah Johnson,Electrical,Medium,Pending,2024-01-18,"Power distribution requirements for amenity floor",15000
+RFI-003,Infrastructure Renovation,Mike Davis,Plumbing,Low,Closed,2024-01-12,"Water pressure specifications for new fixtures",8000
+RFI-004,Downtown Office Complex,Alice Brown,HVAC,High,Open,2024-01-20,"Ductwork routing conflicts with structural elements",30000
+RFI-005,Residential Tower A,Tom Wilson,Fire Safety,Critical,Open,2024-01-22,"Sprinkler system coverage for atrium space",45000
+RFI-006,Infrastructure Renovation,Lisa Chen,Materials,Medium,Pending,2024-01-19,"Substitution approval for concrete mix design",12000
+RFI-007,Downtown Office Complex,Robert Lee,Architectural,Low,Closed,2024-01-16,"Window glazing specifications and energy ratings",18000
+RFI-008,Residential Tower A,Emma Garcia,Structural,Medium,Open,2024-01-21,"Foundation reinforcement details for parking level",35000
