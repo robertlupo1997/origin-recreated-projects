@@ -1,6 +1,5 @@
 # Origin Recreated Projects
 
-[![CI](https://github.com/robertlupo1997/origin-recreated-projects/actions/workflows/ci.yml/badge.svg)](https://github.com/robertlupo1997/origin-recreated-projects/actions/workflows/ci.yml)
 [![Pages](https://github.com/robertlupo1997/origin-recreated-projects/actions/workflows/pages.yml/badge.svg)](https://github.com/robertlupo1997/origin-recreated-projects/actions/workflows/pages.yml)
 
 A collection of public-safe demonstration projects showcasing modern software engineering practices and architectural patterns. These projects recreate common enterprise patterns using synthetic data and generic implementations.

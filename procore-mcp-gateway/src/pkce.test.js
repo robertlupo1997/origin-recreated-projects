@@ -1,25 +1,26 @@
-import { test } from 'node:test';
-import assert from 'node:assert';
-import { pkceHelper } from './pkce.js';
+import { describe, it, expect } from 'vitest'
+import { pkceHelper } from './pkce.js'
 
-test('PKCE verifier should have correct length and charset', async () => {
-  const { codeVerifier } = await pkceHelper.generateChallenge();
-  
-  assert(codeVerifier.length >= 43, 'Code verifier should be at least 43 characters');
-  assert(codeVerifier.length <= 128, 'Code verifier should be at most 128 characters');
-  assert(/^[A-Za-z0-9\-._~]+$/.test(codeVerifier), 'Code verifier should contain only allowed characters');
-});
+describe('pkce helper', () => {
+  it('should generate verifier with correct length and charset', async () => {
+    const { codeVerifier } = await pkceHelper.generateChallenge()
+    
+    expect(codeVerifier.length).toBeGreaterThanOrEqual(43)
+    expect(codeVerifier.length).toBeLessThanOrEqual(128)
+    expect(codeVerifier).toMatch(/^[A-Za-z0-9\-._~]+$/)
+  })
 
-test('PKCE challenge verification should work', async () => {
-  const { codeVerifier, codeChallenge } = await pkceHelper.generateChallenge();
-  const isValid = await pkceHelper.verifyChallenge(codeVerifier, codeChallenge);
-  
-  assert(isValid === true, 'Generated challenge should verify correctly');
-});
+  it('should verify challenge correctly', async () => {
+    const { codeVerifier, codeChallenge } = await pkceHelper.generateChallenge()
+    const isValid = await pkceHelper.verifyChallenge(codeVerifier, codeChallenge)
+    
+    expect(isValid).toBe(true)
+  })
 
-test('PKCE verifier validation should work', () => {
-  const validVerifier = 'abcdefghijklmnopqrstuvwxyz-._~1234567890ABCDEFG'; // 50 chars
-  assert(pkceHelper.isValidVerifier(validVerifier) === true, 'Valid verifier should pass');
-  assert(pkceHelper.isValidVerifier('ab') === false, 'Too short verifier should fail');
-  assert(pkceHelper.isValidVerifier('abc@123') === false, 'Invalid character should fail');
-});
+  it('should validate verifier correctly', () => {
+    const validVerifier = 'abcdefghijklmnopqrstuvwxyz-._~1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ' // 62 chars
+    expect(pkceHelper.isValidVerifier(validVerifier)).toBe(true)
+    expect(pkceHelper.isValidVerifier('ab')).toBe(false)
+    expect(pkceHelper.isValidVerifier('abc@123')).toBe(false)
+  })
+})
