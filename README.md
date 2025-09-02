@@ -204,3 +204,4 @@ MIT License - see [LICENSE](LICENSE) file for details.
 ---
 
 **Portfolio Demonstration** - This repository showcases professional software development practices while maintaining complete security through synthetic data and generic implementations.
+**Docs:** https://robertlupo1997.github.io/origin-recreated-projects/
